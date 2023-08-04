@@ -185,6 +185,7 @@
     that:
       - vsftpd_listen is defined
       - vsftpd_listen is boolean
+      - vsftpd_listen != vsftpd_listen_ipv6
     quiet: yes
 
 - name: assert | Test if vsftpd_listen_ipv6 is set correctly
