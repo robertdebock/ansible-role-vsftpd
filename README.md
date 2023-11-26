@@ -1,4 +1,4 @@
-# Ansible role [vsftpd](#vsftpd)
+# [Ansible role vsftpd](#vsftpd)
 
 Install and configure vsftpd on your system.
 
