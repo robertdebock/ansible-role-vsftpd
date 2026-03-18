@@ -5,9 +5,9 @@ _vsftpd_configuration_file:
   default: /etc/vsftpd/vsftpd.conf
   Debian: /etc/vsftpd.conf
   Suse: /etc/vsftpd.conf
-vsftpd_configuration_file: "{{ _vsftpd_configuration_file[ansible_os_family] | default(_vsftpd_configuration_file['default']) }}"
+vsftpd_configuration_file: "{{ _vsftpd_configuration_file[ansible_facts['os_family']] | default(_vsftpd_configuration_file['default']) }}"
 
 _vsftpd_configuration_file_mode:
   default: '0600'
   Debian: '0644'
-vsftpd_configuration_file_mode: "{{ _vsftpd_configuration_file_mode[ansible_os_family] | default(_vsftpd_configuration_file_mode['default']) }}"
+vsftpd_configuration_file_mode: "{{ _vsftpd_configuration_file_mode[ansible_facts['os_family']] | default(_vsftpd_configuration_file_mode['default']) }}"
